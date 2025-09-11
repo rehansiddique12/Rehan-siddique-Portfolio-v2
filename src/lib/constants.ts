@@ -1,7 +1,6 @@
 import { BriefcaseBusiness, FolderGit2, House, Star } from "lucide-react";
 import Photo from "../assets/img/fav/me.png";
 import MaleAvator from "../assets/img/icons/male-avatar.png";
-import FemaleAvator from "../assets/img/icons/female-avatar.png";
 import ReactIcon from "../assets/img/icons/skills-tools/react.png";
 import BootstrapIcon from "../assets/img/icons/skills-tools/bootstrap.png";
 import ChromeIcon from "../assets/img/icons/skills-tools/chrome.png";
@@ -27,8 +26,8 @@ import HTML2 from "../assets/img/projects/pro3.png";
 
 export const NavLinks = [
   { id: 1, name: "Home", url: "/#Hero", icon: House },
-  { id: 2, name: "Experience", url: "/#Experience", icon: BriefcaseBusiness },
   { id: 3, name: "Work", url: "/#Work", icon: FolderGit2 },
+  { id: 2, name: "Experience", url: "/#Experience", icon: BriefcaseBusiness },
   { id: 3, name: "Reviews", url: "/#Testimonials", icon: Star },
 ];
 
@@ -143,58 +142,58 @@ export const TestimonialsSectionSubHeading =
   "Don't just take my word for it. See what my clients have to say about my work.";
 export const testimonialsData = [
   {
-    text: "Collaborating with Haider Mukhtar on React Native Mobile App Development brings, unparalleled expertise, efficiency and creativity to every project.",
-    image: FemaleAvator,
-    name: "Muaaz Ahmad",
-    role: "Mobile App Developer",
+    text: "Collaborating with Rehan Siddique on Web Application Development brings unparalleled expertise, efficiency, and creativity to every project",
+    image: MaleAvator,
+    name: "Majid Rashid",
+    role: "Web Applications",
   },
   {
-    text: "Collaborating with Haider Mukhtar on React Native Mobile App Development brings, unparalleled expertise, efficiency and creativity to every project.",
+    text: "Collaborating with Rehan Siddique on Web Application Development brings unparalleled expertise, efficiency, and creativity to every project",
     image: MaleAvator,
-    name: "Muaaz Ahmad",
-    role: "Mobile App Developer",
+    name: "Majid Rashid",
+    role: "Web Applications",
   },
   {
-    text: "Collaborating with Haider Mukhtar on React Native Mobile App Development brings, unparalleled expertise, efficiency and creativity to every project.",
+    text: "Collaborating with Rehan Siddique on Web Application Development brings unparalleled expertise, efficiency, and creativity to every project",
     image: MaleAvator,
-    name: "Muaaz Ahmad",
-    role: "Mobile App Developer",
+    name: "Majid Rashid",
+    role: "Web Applications",
   },
   {
-    text: "Collaborating with Haider Mukhtar on React Native Mobile App Development brings, unparalleled expertise, efficiency and creativity to every project.",
+    text: "Collaborating with Rehan Siddique on Web Application Development brings unparalleled expertise, efficiency, and creativity to every project",
     image: MaleAvator,
-    name: "Muaaz Ahmad",
-    role: "Mobile App Developer",
+    name: "Majid Rashid",
+    role: "Web Applications",
   },
   {
-    text: "Collaborating with Haider Mukhtar on React Native Mobile App Development brings, unparalleled expertise, efficiency and creativity to every project.",
+    text: "Collaborating with Rehan Siddique on Web Application Development brings unparalleled expertise, efficiency, and creativity to every project",
     image: MaleAvator,
-    name: "Muaaz Ahmad",
-    role: "Mobile App Developer",
+    name: "Majid Rashid",
+    role: "Web Applications",
   },
   {
-    text: "Collaborating with Haider Mukhtar on React Native Mobile App Development brings, unparalleled expertise, efficiency and creativity to every project.",
+    text: "Collaborating with Rehan Siddique on Web Application Development brings unparalleled expertise, efficiency, and creativity to every project",
     image: MaleAvator,
-    name: "Muaaz Ahmad",
-    role: "Mobile App Developer",
+    name: "Majid Rashid",
+    role: "Web Applications",
   },
   {
-    text: "Collaborating with Haider Mukhtar on React Native Mobile App Development brings, unparalleled expertise, efficiency and creativity to every project.",
+    text: "Collaborating with Rehan Siddique on Web Application Development brings unparalleled expertise, efficiency, and creativity to every project",
     image: MaleAvator,
-    name: "Muaaz Ahmad",
-    role: "Mobile App Developer",
+    name: "Majid Rashid",
+    role: "Web Applications",
   },
   {
-    text: "Collaborating with Haider Mukhtar on React Native Mobile App Development brings, unparalleled expertise, efficiency and creativity to every project.",
+    text: "Collaborating with Rehan Siddique on Web Application Development brings unparalleled expertise, efficiency, and creativity to every project",
     image: MaleAvator,
-    name: "Muaaz Ahmad",
-    role: "Mobile App Developer",
+    name: "Majid Rashid",
+    role: "Web Applications",
   },
   {
-    text: "Collaborating with Haider Mukhtar on React Native Mobile App Development brings, unparalleled expertise, efficiency and creativity to every project.",
+    text: "Collaborating with Rehan Siddique on Web Application Development brings unparalleled expertise, efficiency, and creativity to every project",
     image: MaleAvator,
-    name: "Muaaz Ahmad",
-    role: "Mobile App Developer",
+    name: "Majid Rashid",
+    role: "Web Applications",
   },
 ];
 
