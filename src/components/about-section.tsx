@@ -76,7 +76,7 @@ const AboutSection = () => {
                   </Cursor>
                   <CursorFollow align="bottom-right">
                     <div className="bg-myPalette9 text-myPalette1 border border-white/10 text-xs px-2 py-1 rounded-md shadow-md w-[110px]">
-                      @haidermukhtar
+                      @Rehan_Siddique
                     </div>
                   </CursorFollow>
                 </CursorProvider>
