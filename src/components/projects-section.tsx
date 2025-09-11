@@ -15,8 +15,7 @@ import { Link } from "react-router";
 import { motion } from "motion/react";
 
 const ProjectsSection = () => {
-  // @ts-ignore
-  const [container, setContainer] = useState<HTMLElement | null>(null);
+  const [container] = useState<HTMLElement | null>(null);
   // ref={(node) => setContainer(node)}
   return (
     <div id="Work" className="z-[2]">
