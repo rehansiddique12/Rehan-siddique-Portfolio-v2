@@ -80,7 +80,7 @@ export const ProjectCardsData = [
     image: ReactPro2,
     type: "Personal",
     year: "2025",
-    technologies: ["React Native", "JavaScript", "FireBase"],
+    technologies: ["React JS", "TypeScript", "Tailwind CSS"],
     techColors: ["#818CF8", "#38B2AC", "#3178C6"],
     projectUrl: "https://keto-smoke.vercel.app/",
     githubUrl: "https://github.com/rehansiddique12/KetoSmoke",
