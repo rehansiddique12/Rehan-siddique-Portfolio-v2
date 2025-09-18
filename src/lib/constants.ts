@@ -16,7 +16,7 @@ import DiscordIcon from "../assets/img/icons/social-icons/discord.png";
 import InstagramIcon from "../assets/img/icons/social-icons/instagram.png";
 import MediumIcon from "../assets/img/icons/social-icons/facebook.webp";
 
-import ReactPro1 from "../assets/img/projects/pimpact 1.png";
+import ReactPro1 from "../assets/img/projects/pimpacthome.png";
 import ReactPro2 from "../assets/img/projects/new.png";
 import ReactPro3 from "../assets/img/projects/pro2.png";
 import HTML1 from "../assets/img/projects/in2itive.png";
