@@ -31,13 +31,13 @@ const Loader: React.FC<LoaderProps> = ({ onComplete }) => {
   return (
     <div
       className={`flex items-center justify-center min-h-screen bg-gray-50 p-4 transition-transform duration-1000 ease-in-out ${
-        done ? "-translate-y-full" : "translate-y-0"
+        done ? "-translate-y-full opacity-0" : "translate-y-0 opacity-100"
       }`}
     >
-      <div className="bg-white rounded-3xl p-8 shadow-2xl w-full max-w-lg">
+      <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-2xl w-full max-w-xs sm:max-w-lg">
         {/* Loader Header */}
         <div className="flex justify-between items-center mb-6">
-          <span className="text-xl font-semibold text-gray-800 tracking-wider">
+          <span className="text-lg sm:text-xl font-semibold text-gray-800 tracking-wider">
             LOADER
           </span>
           <div className="flex space-x-1">
@@ -48,11 +48,11 @@ const Loader: React.FC<LoaderProps> = ({ onComplete }) => {
         </div>
 
         {/* Progress Blocks */}
-        <div className="flex justify-between items-center mb-4 bg-black/5 px-3 py-2 rounded-lg">
+        <div className="flex justify-between items-center mb-4 bg-black/5 px-2 sm:px-3 py-2 rounded-lg">
           {[...Array(10)].map((_, index) => (
             <div
               key={index}
-              className={`w-8 h-8 rounded-lg transition-colors duration-100 ${
+              className={`w-5 h-5 sm:w-8 sm:h-8 rounded-sm md:rounded-lg transition-colors duration-100 ${
                 index < activeBlocks ? "bg-gray-800" : "bg-gray-200"
               }`}
             ></div>
@@ -61,7 +61,9 @@ const Loader: React.FC<LoaderProps> = ({ onComplete }) => {
 
         {/* Percentage Text */}
         <div className="flex justify-end mt-4">
-          <span className="text-2xl font-sm text-gray-500">{progress}%</span>
+          <span className="text-lg sm:text-2xl font-semibold text-gray-500">
+            {progress}%
+          </span>
         </div>
       </div>
     </div>
