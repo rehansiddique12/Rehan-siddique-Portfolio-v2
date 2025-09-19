@@ -29,7 +29,7 @@ const ProjectsSection = () => {
             ease: [0.16, 1, 0.3, 1],
           }}
           viewport={{ once: true }}
-          className="relative z-[3] pt-32 items-center justify-center flex flex-col bg-rd-200 pb-32"
+          className="relative z-[3] pt-10 md:pt-32 items-center justify-center flex flex-col bg-rd-200 pb-32"
         >
           <div className="relative font-myMainFont w-full text-4xl md:text-6xl font-semibold flex justify-center items-center text-myPalette9">
             {ProjectsSectionHeading}
