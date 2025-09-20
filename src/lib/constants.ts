@@ -16,11 +16,12 @@ import DiscordIcon from "../assets/img/icons/social-icons/discord.png";
 import InstagramIcon from "../assets/img/icons/social-icons/instagram.png";
 import MediumIcon from "../assets/img/icons/social-icons/facebook.webp";
 
-import ReactPro1 from "../assets/img/projects/pimpacthome.png";
+import HTML2 from "../assets/img/projects/pro3.png";
+import NIKE from "../assets/img/projects/nike-store.png";
 import ReactPro2 from "../assets/img/projects/new.png";
 import ReactPro3 from "../assets/img/projects/pro2.png";
 import HTML1 from "../assets/img/projects/in2itive.png";
-import HTML2 from "../assets/img/projects/pro3.png";
+import ReactPro1 from "../assets/img/projects/pimpacthome.png";
 
 
 
@@ -133,6 +134,25 @@ export const ProjectCardsData = [
       "https://www.provantapharma.com/",
     githubUrl:
       "https://github.com/rehansiddique12/Provanta",
+  },
+  {
+    id: 6,
+    title: "Nike Store",
+    description: "Provanta Pharma is a Pakistani veterinary company providing quality pharmaceutical solutions for poultry and livestock, focused on innovation, care, and customer trust",
+    image: NIKE,
+    type: "Clinte",
+    year: "2024",
+    technologies: [
+      "Vite",
+      "React JS",
+      "TailwindCSS",
+      "TypeScript",
+    ],
+    techColors: ["#818CF8", "#38B2AC", "#3178C6"],
+    projectUrl:
+      "https://nike-store-iota-bice.vercel.app/",
+    githubUrl:
+      "https://github.com/rehansiddique12/NIKE-Store",
   },
 ];
 
