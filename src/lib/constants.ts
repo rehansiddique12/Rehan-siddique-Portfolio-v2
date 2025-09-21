@@ -138,7 +138,7 @@ export const ProjectCardsData = [
   {
     id: 6,
     title: "Nike Store",
-    description: "Provanta Pharma is a Pakistani veterinary company providing quality pharmaceutical solutions for poultry and livestock, focused on innovation, care, and customer trust",
+    description: "This project is a Nike Store UI concept designed to highlight modern e-commerce aesthetics. The interface delivers a clean, responsive, and visually engaging experience, showcasing Nike products with smooth animations, interactive elements, and dynamic product displays.",
     image: NIKE,
     type: "Clinte",
     year: "2024",
