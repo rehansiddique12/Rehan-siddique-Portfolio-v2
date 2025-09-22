@@ -71,7 +71,7 @@ export const ProjectCardsData = [
     year: "2025",
     technologies: ["React JS", "TypeScript", "Tailwind CSS", "Redux-Toolkit", "Shadcn"],
     techColors: ["#818CF8", "#38B2AC", "#3178C6"],
-    projectUrl:"https://pimpact.io/",
+    projectUrl:"https://pimpact-landing-page.vercel.app/",
     githubUrl: "https://github.com/Dev-DigiMark/pimpackt-frontend-v2",
   },
   {
