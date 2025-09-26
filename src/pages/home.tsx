@@ -6,6 +6,7 @@ import TestimonialsSection from "@/components/testimonials-section";
 import ExperienceSection from "@/components/experience-section";
 import AboutSection from "@/components/about-section";
 import Footer from "@/components/footer";
+import Chatbord from "@/components/chat-bord";
 
 const Home = () => {
   // const [time, setTime] = useState(moment().format("LTS"));
@@ -26,6 +27,7 @@ const Home = () => {
       <ExperienceSection />
       <AboutSection />
       <TestimonialsSection />
+      <Chatbord/>
       <Footer />
       {/* <div className="absolute z-[4] bottom-2 right-2 flex gap-2 items-end justify-end">
         <ModeToggleBtn />
@@ -40,3 +42,4 @@ const Home = () => {
 };
 
 export default Home;
+
