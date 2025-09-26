@@ -28,7 +28,7 @@ const Chatbord = () => {
           <div className="duration-700 absolute bottom-16  right-10 w-72 rounded-lg rounded-br-none shadow-xl z-50 overflow-hidden border-gray-400/15  bg-transparent backdrop-blur-sm">
             <div className="flex items-center justify-between p-4">
               <span className="font-semibold text-xl">Chat Board</span>
-              <Button size="sm">
+              <Button size="sm" onClick={ () =>  setOpen(false)} className="corsor-pointer">
                 <CircleX className="text-black" />
               </Button>
             </div>
