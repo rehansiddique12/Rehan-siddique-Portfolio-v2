@@ -22,6 +22,7 @@ import ReactPro2 from "../assets/img/projects/new.png";
 import ReactPro3 from "../assets/img/projects/pro2.png";
 import HTML1 from "../assets/img/projects/in2itive.png";
 import ReactPro1 from "../assets/img/projects/pimpacthome.png";
+import vicross from "../assets/img/projects/vicross-about.png";
 
 
 
@@ -74,20 +75,9 @@ export const ProjectCardsData = [
     projectUrl:"https://pimpact-landing-page.vercel.app/",
     githubUrl: "https://github.com/Dev-DigiMark/pimpackt-frontend-v2",
   },
+  
   {
     id: 2,
-    title: "Keto-Smoke",
-    description: "Keto Smoke offers all-natural, low-carb seasonings crafted to enhance your BBQ with bold, smoky flavors. Perfect for keto lifestyles, it adds taste without compromise",
-    image: ReactPro2,
-    type: "Personal",
-    year: "2025",
-    technologies: ["React JS", "TypeScript", "Tailwind CSS"],
-    techColors: ["#818CF8", "#38B2AC", "#3178C6"],
-    projectUrl: "https://keto-smoke.vercel.app/",
-    githubUrl: "https://github.com/rehansiddique12/KetoSmoke",
-  },
-  {
-    id: 3,
     title: "Estimaitor",
     description:
       "Automatically detect, measure, compare and label project spaces and features on architectural plans and drawings in seconds, not hours",
@@ -98,6 +88,18 @@ export const ProjectCardsData = [
     techColors: ["#818CF8", "#38B2AC", "#3178C6"],
     projectUrl: "https://estim-aitor.vercel.app/auth/login",
     githubUrl: "https://github.com/rehansiddique12/Estimator-React",
+  },
+  {
+    id: 3,
+    title: "Keto-Smoke",
+    description: "Keto Smoke offers all-natural, low-carb seasonings crafted to enhance your BBQ with bold, smoky flavors. Perfect for keto lifestyles, it adds taste without compromise",
+    image: ReactPro2,
+    type: "Personal",
+    year: "2025",
+    technologies: ["React JS", "TypeScript", "Tailwind CSS"],
+    techColors: ["#818CF8", "#38B2AC", "#3178C6"],
+    projectUrl: "https://keto-smoke.vercel.app/",
+    githubUrl: "https://github.com/rehansiddique12/KetoSmoke",
   },
   {
     id: 4,
@@ -140,8 +142,28 @@ export const ProjectCardsData = [
     title: "Nike Store",
     description: "This project is a Nike Store UI concept designed to highlight modern e-commerce aesthetics. The interface delivers a clean, responsive, and visually engaging experience, showcasing Nike products with smooth animations, interactive elements, and dynamic product displays.",
     image: NIKE,
-    type: "Clinte",
+    type: "Personal",
     year: "2024",
+    technologies: [
+      "Vite",
+      "React JS",
+      "TailwindCSS",
+      "TypeScript",
+      "Framer Motion",
+    ],
+    techColors: ["#818CF8", "#38B2AC", "#3178C6"],
+    projectUrl:
+      "https://nike-store-iota-bice.vercel.app/",
+    githubUrl:
+      "https://github.com/rehansiddique12/NIKE-Store",
+  },
+  {
+    id: 7,
+    title: "Vi-cross",
+    description: "A modern Website UI concept built with React.js, TypeScript, and Vite, featuring a clean, responsive design, smooth animations, and dynamic product displays to showcase modern frontend development practices.",
+    image: vicross,
+    type: "Personal",
+    year: "2025",
     technologies: [
       "Vite",
       "React JS",
@@ -150,9 +172,9 @@ export const ProjectCardsData = [
     ],
     techColors: ["#818CF8", "#38B2AC", "#3178C6"],
     projectUrl:
-      "https://nike-store-iota-bice.vercel.app/",
+      "https://vi-cross-landing-page-v1.vercel.app/",
     githubUrl:
-      "https://github.com/rehansiddique12/NIKE-Store",
+      "https://github.com/rehansiddique12/Vi-cross",
   },
 ];
 
@@ -232,6 +254,7 @@ export const ExperienceData = [
     technologies: [
       "Tailwind CSS",
       "React",
+      "Redux Toolkit",
       "JavaScript",
       "TypeScript",
       "GitHub",

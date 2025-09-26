@@ -108,7 +108,7 @@ const ProjectsSection = () => {
                       </div>
                     </div>
 
-                    <div className="w-full sm:w-1/2 rounded-xl aspect-video relative overflow-hidden">
+                    <div className="w-full sm:w-1/2 rounded-xl aspect-video relative overflow-hidden items-center justify-center flex">
                       <img
                         src={project.image}
                         alt={project.title}
