@@ -1,33 +1,75 @@
 import "ldrs/react/Bouncy.css";
 import { cn } from "@/lib/utils";
-import { Bouncy } from "ldrs/react";
+// import { Bouncy } from "ldrs/react";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { useEffect, useRef, useState } from "react";
 import { Separator } from "@/components/ui/separator";
 import { BotMessageSquare, CircleX, Send } from "lucide-react";
 
+interface Message {
+  sender: string;
+  text: string;
+  type: "user" | "ai";
+  id?: string;
+}
+
 const Chatbord = () => {
-  const [typing, setTyping] = useState<boolean>(false);
+  const [userInput, setUserInput] = useState("");
   const inputref = useRef<HTMLInputElement | null>(null);
-  const typingTimer = useRef<NodeJS.Timeout | null>(null);
   const [open, setOpen] = useState<boolean | undefined>(undefined);
+  const [messages, setMessages] = useState<Message[]>([]);
+
+  const n8nWebhookUrl =
+    "https://n8n.scintia.ai/1306a6cb-608a-471a-a84b-f07f981c67da";
+
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
+    if (!userInput.trim()) return;
+
+    const userMessage: Message = {
+      sender: "me",
+      text: userInput,
+      type: "user",
+    };
+
+    setMessages((prevMessages: Message[]) => [...prevMessages, userMessage]);
+    setUserInput("");
+
+    try {
+      const response = await fetch(n8nWebhookUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: userInput }),
+      });
+
+      const data = await response.json();
+
+      const aiMessage: Message = {
+        sender: "AI",
+        text: data.output,
+        type: "ai",
+      };
+
+      setMessages((prevMessages: Message[]) => [...prevMessages, aiMessage]);
+    } catch (error) {
+      console.error("Error communicating with n8n AI agent:", error);
+
+      const errorMessage: Message = {
+        sender: "AI",
+        text: "Error: Could not get a response from the AI agent.",
+        type: "ai",
+      };
+
+      setMessages((prevMessages: Message[]) => [...prevMessages, errorMessage]);
+    }
+  };
 
   useEffect(() => {
     if (open) {
       inputref.current?.focus();
     }
   }, [open]);
-
-  const handleTyping = () => {
-    setTyping(true);
-
-    if (typingTimer.current) clearTimeout(typingTimer.current);
-
-    typingTimer.current = setTimeout(() => {
-      setTyping(false);
-    }, 4000);
-  };
 
   const handleToggle = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -54,7 +96,7 @@ const Chatbord = () => {
               <Button
                 size="sm"
                 onClick={() => setOpen(false)}
-                className="corsor-pointer"
+                className="cursor-pointer"
               >
                 <CircleX className="text-black" />
               </Button>
@@ -71,25 +113,40 @@ const Chatbord = () => {
                 </p>
               </div>
 
-              <div className="flex justify-end">
-                <p className="text-[12px] text-white bg-black px-3 py-2 rounded-2xl rounded-tr-none max-w-xs break-words">
-                  hi Rehan how are you?
-                </p>
-              </div>
-              {typing && (
-                <div className="flex justify-end">
-                  <p className="text-[12px] text-white bg-black px-3 py-1 rounded-2xl rounded-tr-none max-w-xs break-words">
-                    <Bouncy size="30" speed="1.75" color="white" />
-                  </p>
-                </div>
-              )}
+              {messages &&
+                Array.isArray(messages) &&
+                messages.map((msg, idx) => (
+                  <div
+                    key={idx}
+                    className={`flex ${
+                      msg.type === "user" ? "justify-end" : "justify-start"
+                    }`}
+                  >
+                    <p
+                      className={`text-[12px] px-3 py-2 rounded-2xl max-w-xs break-words ${
+                        msg.type === "user"
+                          ? "text-white bg-black rounded-tr-none"
+                          : "bg-[#ffffff88] shadow-md text-black rounded-tl-none"
+                      }`}
+                    >
+                      {msg.text}
+                    </p>
+                    {/* {
+                      msg.type === "ai" && <p>Speak</p>
+                    } */}
+                  </div>
+                ))}
             </div>
-            <form className="flex w-full items-center justify-center gap-2.5 border-black border-t p-2.5">
+            <form
+              onSubmit={handleSubmit}
+              className="flex w-full items-center justify-center gap-2.5 border-black border-t p-2.5"
+            >
               <Input
-                onChange={handleTyping}
-                className="bg-[linear-gradient(#ffffff33)"
                 ref={inputref}
+                value={userInput}
+                onChange={(e) => setUserInput(e.target.value)}
                 placeholder="Ask a question"
+                className="bg-[linear-gradient(#ffffff33)"
               ></Input>
               <Button className=" cursor-pointer bg-[linear-gradient(#ffffff33),linear-gradient(#fff_50%,rgba(255,255,255,0.6)_80%,rgba(0,0,0,0)),linear-gradient(90deg,hsl(0,100%,63%),hsl(90,100%,63%),hsl(210,100%,63%),hsl(195,100%,63%),hsl(270,100%,63%))] bg-[length:200%] text-foreground [background-clip:padding-box,border-box,border-box] [background-origin:border-box] [border:calc(0.08*1rem)_solid_transparent] before:absolute before:bottom-[-20%] before:left-1/2 before:z-[0] before:h-[20%] before:w-[60%] before:-translate-x-1/2 before:animate-rainbow before:bg-[linear-gradient(90deg,hsl(0,100%,63%),hsl(90,100%,63%),hsl(210,100%,63%),hsl(195,100%,63%),hsl(270,100%,63%))] before:[filter:blur(calc(0.8*1rem))] dark:bg-[linear-gradient(#121213,#121213),linear-gradient(#121213_50%,rgba(18,18,19,0.6)_80%,rgba(18,18,19,0)),linear-gradient(90deg,hsl(0,100%,63%),hsl(90,100%,63%),hsl(210,100%,63%),hsl(195,100%,63%),hsl(270,100%,63%))]">
                 <Send className="h-4 w-4" />
